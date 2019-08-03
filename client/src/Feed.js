@@ -47,18 +47,15 @@ const FeedEntry = ({ item }) => (
   </ListItem>
 );
 
-const renderPoll = option => {
-  console.log(option);
-  return (
-    <ListItem
-      title={option.item.text}
-      description={`Responses: ${option.item.responses}`}
-      titleStyle={{ color: '#000' }}
-      descriptionStyle={{ color: '#000' }}
-      style={{ color: '#000' }}
-    />
-  )
-};
+const renderPoll = option => (
+  <ListItem
+    title={option.item.text}
+    description={`Responses: ${option.item.responses}`}
+    titleStyle={{ color: '#000' }}
+    descriptionStyle={{ color: '#000' }}
+    style={{ color: '#000' }}
+  />
+);
 
 const usePosts = () => {
   const [posts, setPosts] = useState([]);
